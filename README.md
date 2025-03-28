@@ -25,11 +25,11 @@ Para executar o programa, você precisa ter:
 2.  Abra o terminal na pasta onde o arquivo está salvo.
 3.  Execute o programa com o comando:
     ```bash
-    python restaurantes.py
+    python app.py
     ```
     ou
     ```bash
-    python3 restaurantes.py
+    python3 app.py
     ```
     (depende da configuração do seu sistema).
 4.  O programa exibirá um banner e um menu com as opções disponíveis. Digite o número correspondente à ação desejada e siga as instruções na tela.
@@ -80,22 +80,22 @@ Ao executar o programa, você verá algo assim:
 Escolha uma opção:
 
 ## Limitações
-Persistência: O programa não persiste os dados. Os restaurantes cadastrados são armazenados apenas na memória durante a execução e são perdidos ao fechar o programa.
+*   Persistência: O programa não persiste os dados. Os restaurantes cadastrados são armazenados apenas na memória durante a execução e são  perdidos ao fechar o programa.
 
-Validação: Não há validação avançada para entradas (como nomes duplicados, categorias padronizadas ou tratamento de campos vazios).
+*   Validação: Não há validação avançada para entradas (como nomes duplicados, categorias padronizadas ou tratamento de campos vazios).
 
-Portabilidade da Limpeza de Tela: Funciona melhor em sistemas Windows devido ao comando os.system('cls'). Em sistemas Unix/Linux (como macOS ou distribuições Linux), o ideal é substituir por os.system('clear') para limpar o terminal corretamente.
+*   Portabilidade da Limpeza de Tela: Funciona melhor em sistemas Windows devido ao comando os.system('cls'). Em sistemas Unix/Linux (como macOS ou distribuições Linux), o ideal é substituir por os.system('clear') para limpar o terminal corretamente.
 
 ## Possíveis Melhorias
-Adicionar persistência de dados salvando/carregando a lista de restaurantes em um arquivo (ex.: JSON, CSV ou um banco de dados simples como SQLite).
+*   Adicionar persistência de dados salvando/carregando a lista de restaurantes em um arquivo (ex.: JSON, CSV ou um banco de dados simples como SQLite).
 
-### Implementar validação de entradas para evitar erros (ex: não permitir nomes duplicados, garantir que a categoria não esteja vazia).
+*   Implementar validação de entradas para evitar erros (ex: não permitir nomes duplicados, garantir que a categoria não esteja vazia).
 
-### Adicionar opções para editar informações de um restaurante existente ou excluir um restaurante.
+*   Adicionar opções para editar informações de um restaurante existente ou excluir um restaurante.
 
-### Melhorar a interface do usuário, talvez utilizando uma biblioteca como rich para uma CLI mais elaborada, ou criar uma versão gráfica com Tkinter ou PyQt.
+*   Melhorar a interface do usuário, talvez utilizando uma biblioteca como rich para uma CLI mais elaborada, ou criar uma versão gráfica com Tkinter ou PyQt.
 
-### Refatorar o código para usar Programação Orientada a Objetos (OOP), criando uma classe Restaurante.
+*   Refatorar o código para usar Programação Orientada a Objetos (OOP), criando uma classe Restaurante.
 
 ## Contribuições
 Sinta-se à vontade para sugerir melhorias, reportar bugs ou enviar pull requests! Este é um projeto simples e aberto para aprendizado e colaboração.
