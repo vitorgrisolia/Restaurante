@@ -51,9 +51,10 @@ class Restaurante:
     # def addicionar_prato_cardapio(self, prato):
     #     self._cardapio.append(prato)
 
-    def addiconar_cardapio(self):
-        if isinstance(Itens,Itens):
-            self._cardapio.append(Itens)
+    def addiconar_cardapio(self, item):
+        """Adiciona um item ao cardápio do restaurante."""
+        if isinstance(item,Itens):
+            self._cardapio.append(item)
 
     @property
     def exibir_cardapio(self):
