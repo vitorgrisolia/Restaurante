@@ -10,7 +10,7 @@ restaurante_praca.addiconar_cardapio(prato_bife)
 
 
 def main():
-    restaurante_praca.exibir_cardapio
+    restaurante_praca.exibir_cardapio()
 
 if __name__ == "__main__":
     main()
