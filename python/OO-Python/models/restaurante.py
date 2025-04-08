@@ -56,9 +56,9 @@ class Restaurante:
         if isinstance(item,Itens):
             self._cardapio.append(item)
 
-    @property
+    # @property
     def exibir_cardapio(self):
         print(f'Cardápio do restaurante {self._nome}:\n')
         for i,item in enumerate(self._cardapio, start=1):
-            mensagem = f'{i} - {item._nome} - R$ {item._preco:.2f}'
+            mensagem = f'{i} - {item.nome} - R$ {item.preco}'
             print(mensagem)
