@@ -1,12 +1,16 @@
 from models.restaurante import Restaurante
+from models.cardapio.bebida import Bebida
+from models.cardapio.prato import Prato
 
 restaurante_praca = Restaurante('Praça do Sol', 'Comida Brasileira')
-restaurante_mixcana = Restaurante('Mix Culinário', 'Comida Mexicana')
-restaurante_japonesa = Restaurante('Sushi Brasil', 'Comida Japonesa')
-restaurante_mixcana.ativar()
+bebida_suco = Bebida('Suco de Laranja', 5.0, '300ml')
+prato_bife = Prato('Bife Acebolado', 25.00, 'Bife com cebola e arroz')
+restaurante_praca.addiconar_cardapio(bebida_suco)
+restaurante_praca.addiconar_cardapio(prato_bife)
+
 
 def main():
-    Restaurante.listar_restaurantes()
+    restaurante_praca.exibir_cardapio
 
 if __name__ == "__main__":
     main()
