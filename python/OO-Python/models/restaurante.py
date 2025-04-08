@@ -52,7 +52,7 @@ class Restaurante:
     #     self._cardapio.append(prato)
 
     def addiconar_cardapio(self):
-        if isinstance(item,Itens):
+        if isinstance(Itens,Itens):
             self._cardapio.append(Itens)
 
     @property
