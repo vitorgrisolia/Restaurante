@@ -21,7 +21,7 @@ class Restaurante:
         print('------------------------------------')
         print(f'{'Restaurante'.ljust(38)} | {'Categoria'.ljust(36)} | {'Status'.ljust(25)} | {'Avaliação'}')
         for restaurante in cls.restaurantes:
-            print(f'Restaurante: {restaurante._nome.ljust(25)} - Categoria: {restaurante._categoria.ljust(25)} - Ativo: {restaurante.ativo.ljust(17)} | Avaliação: {restaurante.media_avaliacao}')
+            print(f'Restaurante: {restaurante._nome.ljust(25)} - Categoria: {restaurante._categoria.ljust(25)} - Ativo: {restaurante.ativo.ljust(17)} | Avaliação: {restaurante.media_avaliacao} \n')
     
     @property
     def ativo(self):
@@ -58,7 +58,7 @@ class Restaurante:
 
     # @property
     def exibir_cardapio(self):
-        print(f'Cardápio do restaurante {self._nome}:\n')
+        print(f'Cardápio do restaurante {self._nome} - Categoria {self._categoria}:\n')
         for i,item in enumerate(self._cardapio, start=1):
-            mensagem = f'{i} - {item.nome} - R$ {item.preco}'
+            mensagem = f'{i} - {item.nome} - R$ {item.preco:.2f}'
             print(mensagem)
