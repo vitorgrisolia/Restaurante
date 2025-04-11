@@ -1,5 +1,6 @@
 from models.avaliacao import Avaliacao
 from models.cardapio.itens import Itens
+from models.cardapio.sobremessa import Sobremessa
 
 class Restaurante:
     restaurantes = []
@@ -10,6 +11,8 @@ class Restaurante:
         self._ativo = False
         self._avaliacao = []
         self._cardapio = []
+        self._sobremessa = []
+        self._sobremessa = Sobremessa
         Restaurante.restaurantes.append(self)
     
     def __str__(self):
@@ -19,7 +22,7 @@ class Restaurante:
     def listar_restaurantes(cls):
         print('Listando Restaurantes:')
         print('------------------------------------')
-        print(f'{'Restaurante'.ljust(38)} | {'Categoria'.ljust(36)} | {'Status'.ljust(25)} | {'Avaliação'}')
+        print(f'{'Restaurante'.ljust(38)} | {'Categoria'.ljust(36)} | {'Status'.ljust(25)} | {'Avaliação'} \n')
         for restaurante in cls.restaurantes:
             print(f'Restaurante: {restaurante._nome.ljust(25)} - Categoria: {restaurante._categoria.ljust(25)} - Ativo: {restaurante.ativo.ljust(17)} | Avaliação: {restaurante.media_avaliacao} \n')
     
@@ -60,5 +63,14 @@ class Restaurante:
     def exibir_cardapio(self):
         print(f'Cardápio do restaurante {self._nome} - Categoria {self._categoria}:\n')
         for i,item in enumerate(self._cardapio, start=1):
-            mensagem = f'{i} - {item.nome} - R$ {item.preco:.2f}'
-            print(mensagem)
+            if hasattr(item, 'descricao'):
+                mensagem_prato = f'{i} - {item.nome} - R$ {item.preco:.2f} - Descrição: {item.descricao}'
+                print(mensagem_prato)
+            elif hasattr(item, 'tamanho'):
+                mensagem_bebida = f'{i} - {item.nome} - R$ {item.preco:.2f} - Tamanho: {item.tamanho}'
+                print(mensagem_bebida)
+            elif hasattr(item, 'tipo'):
+                mensagem_sobremessa = f'{i} - {item.nome} - R$ {item.preco:.2f} - Tipo: {item.tamanho} - Tamanho: {item.tipo} - Descrição: {item.descricao}'
+                print(mensagem_sobremessa)
+            else:
+                print(f'{i} - {item.nome} - R$ {item.preco:.2f}');

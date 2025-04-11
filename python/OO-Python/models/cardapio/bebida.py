@@ -7,3 +7,6 @@ class Bebida(Itens):
 
     def __str__(self):
         return self._nome
+    
+    def aplicar_desconto(self):
+        self.preco -= (self.preco * 0.05)
